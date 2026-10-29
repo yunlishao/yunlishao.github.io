@@ -10,10 +10,14 @@
     })(window,document,'script','dataLayer','GTM-NZSF2Q9J');</script>
     <!-- End Google Tag Manager -->
     <meta charset="utf-8">
-    <title>Yunli Shao</title>
+    <title>Living Lab for Smart Intersections | Yunli Shao</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="A live, camera-based living lab at a UGA campus intersection: live view, replay, safety-critical events, turning movements and signal performance, and a test bed for prediction, driver warnings and signal timing." name="description">
+    <meta property="og:title" content="Living Lab for Smart Intersections">
+    <meta property="og:description" content="A live, camera-based living lab at a UGA campus intersection: live view, replay, safety-critical events, turning movements and signal performance, and a test bed for prediction, driver warnings and signal timing.">
+    <meta property="og:image" content="https://yunlishao.github.io/assets/livinglab/demo_poster.jpg">
+    <meta property="og:url" content="https://yunlishao.github.io/research/livinglab.html">
 
     <!-- Favicon -->
     <link href="../img/web-logo.png" rel="icon">
@@ -38,6 +42,7 @@
 
     <!-- Template Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/livinglab.css" rel="stylesheet">
 </head>
 
 <body>
@@ -131,44 +136,296 @@
     <!-- Page Header End -->
 
     <!-- Research Start -->
-    <div class="container-xxl py-5" style="padding-top:0rem !important">
-        <div class="container research-interests">
-            <div class="row g-4 mb-5">
-                <h4 class="research-title">Living Laboratory and Data Analytics</h4>
-                <!-- <p class="research-funder">Funded by NSF program (PI, $$, time)</p> -->
+    <div class="container-xxl pb-5" style="padding-top:0rem !important">
+        <div class="container ll">
 
-                <img src="../assets/R5_img1.png" class="img-fluid research-img-width mb-1 mt-4">
-                <p class="research-content">Transportation accounts for a significant portion of total global energy consumption. Excessive
-                energy consumption usually occurs in urban traffic environments with congestions and travel
-                delays. With the advancement of remote sensing and computer vision technologies, real-time
-                traffic conditions can be monitored. Therefore, sustainable transportation management strategies
-                can be developed to optimize the overall energy and environment performance and reduce
-                congestions and emissions. A smart traffic monitoring system is presented based on remote
-                camera sensors to create a living lab for a smart campus. Real-time and historical traffic conditions were monitored and analyzed to develop optimal
-                transportation management strategies for sustainability. Computer vision algorithms were
-                developed and applied to process the real-time camera data to obtain complete traffic information
-                across the smart campus. Weeks of historical data were collected and processed to analyze the
-                traffic and identify bottlenecks. The proposed traffic monitoring and management approach can
-                be applied and extended to benefit other campuses or urban areas.
-                 </p>
-                
-                <img src="../assets/R5_img2.png" class="img-fluid research-img-width mb-1 mt-4">
-                <img src="../assets/R5_img3.png" class="img-fluid research-img-width mb-1 mt-4">
-                <img src="../assets/R5_img4.png" class="img-fluid research-img-width mb-2 mt-4">
+            <section id="top">
+                <h1 class="ll-title">Living Lab for Smart Intersections</h1>
+                <p class="ll-live"><span class="ll-dot"></span>Live at Sanford Drive and Cedar Street, UGA campus</p>
+                <p class="ll-lead">Our living lab is a working campus intersection that we can watch and measure live. A panoramic traffic camera on the signal pole and an edge computer in the signal cabinet stream to our lab, where every car, bus, bike and person is tracked as it moves. We see the intersection as it is right now, replay any stored stretch, and measure safety, traffic and signal performance from real traffic. The same live feed is where we test our research: trajectory prediction, driver warnings and signal timing. Sanford and Cedar is the first site, and the platform is built to add more.</p>
+                <nav class="ll-toc" aria-label="On this page">
+                    <div class="ll-toc-label">On this page</div>
+                    <div class="ll-toc-grid">
+                        <a href="#demo"><i class="fa fa-play-circle"></i><span>Demo video</span></a>
+                        <a href="#sites"><i class="fa fa-map-marker-alt"></i><span>Deployment sites</span></a>
+                        <a href="#how"><i class="fa fa-project-diagram"></i><span>How it works</span></a>
+                        <a href="#today"><i class="fa fa-chart-line"></i><span>Current capabilities</span></a>
+                        <a href="#next"><i class="fa fa-flask"></i><span>Ongoing research</span></a>
+                        <a href="#publications"><i class="fa fa-book"></i><span>Publications</span></a>
+                        <a href="#contact"><i class="fa fa-handshake"></i><span>Work with us</span></a>
+                    </div>
+                </nav>
+            </section>
 
+            <section id="demo">
+                <h2>Demo video</h2>
+                <p class="muted">A screen recording of the live dashboard: the live view, a replay of a morning class change, traffic through the day, and safety events picked from the map.</p>
+                <figure class="ll-video">
+                    <video controls preload="metadata" playsinline poster="../assets/livinglab/demo_poster.jpg" width="1280" height="832">
+                        <source src="../assets/livinglab/demo.mp4" type="video/mp4">
+                        Your browser cannot play this video. <a href="../assets/livinglab/demo.mp4">Download it</a>.
+                    </video>
+                </figure>
+            </section>
 
-                <!-- <video controls><source src="../assets/R5_video1.mp4" type="video/mp4" ></video>
-                <video controls><source src="../assets/R5_video2.mp4" type="video/mp4" ></video> -->
-            </div>
-            <!-- <div style="position:relative">
-            <a href="/research/research_4.html" class="btn btn-link btn-sm research-link-pre" style="margin-left: -1rem;"><i class="fa fa-arrow-left ms-3"></i>&nbsp;&nbsp;&nbsp;Evaluation of Connected and Automated Vehicles</a> 
-            <a href="/research/research_1.html" class="btn btn-link btn-sm research-link-next">Research_3<i class="fa fa-arrow-right ms-3"></i></a>
-            </div>   -->
-            <a href="/research.html" class="btn btn-primary btn-sm py-2 px-3 mt-4 research-item-btn">Go back<i class="fa fa-arrow-left ms-3"></i></a>
+            <section id="sites">
+                <h2>Deployment sites</h2>
+                <p class="muted">Each site needs a panoramic camera on the signal pole and a small computer in the signal cabinet. The rest runs on lab servers.</p>
+                <div class="row g-4">
+                    <div class="col-lg-9">
+                        <div class="ll-site">
+                            <div class="ll-site-head">
+                                <h3>Sanford Drive and Cedar Street, UGA campus</h3>
+                                <span class="ll-site-status">Live · installed April 2026</span>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-sm-7 col-md-5">
+                                    <figcaption class="ll-cap-out">On the signal pole</figcaption>
+                                    <figure class="ll-pin">
+                                        <img src="../assets/livinglab/pole_head.jpg" width="900" height="624" alt="Top of the signal pole with the traffic camera and the roadside unit">
+                                        <span class="ll-num" style="left:12%; top:60%">1</span>
+                                        <span class="ll-num" style="left:66%; top:20%">2</span>
+                                    </figure>
+                                    <ul class="ll-kit">
+                                        <li><span class="ll-num">1</span><b>Panoramic traffic camera.</b> Sees all four approaches and crosswalks from one pole.</li>
+                                        <li><span class="ll-num">2</span><b>V2X roadside unit.</b> Standards-compatible (C-V2X or DSRC), for messages between the intersection and connected vehicles.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-5 col-md-3">
+                                    <figure>
+                                        <img src="../assets/livinglab/pole_install.jpg" width="700" height="929" alt="Installing the camera from a bucket truck" loading="lazy">
+                                        <figcaption>Installation, April 2026</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure class="mb-2">
+                                        <figcaption>Views from the camera</figcaption><img src="../assets/livinglab/view_cam1.jpg" width="1280" height="720" alt="Camera view of the west and north crosswalks with a campus bus" loading="lazy">
+                                    </figure>
+                                    <figure>
+                                        <img src="../assets/livinglab/view_cam4.jpg" width="1280" height="720" alt="Camera view of the south and east crosswalks with cars waiting" loading="lazy">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="ll-site next h-100">
+                            <div class="ll-site-head"><span class="ll-site-status">Next site</span></div>
+                            <p class="mb-2">The platform is built to add intersections. A new site uses the same software and dashboard, with its own camera views and map.</p>
+                            <p class="mb-0"><a href="#contact">Interested in a site? Get in touch.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <section id="how">
+                <h2>How it works</h2>
+                <div class="row g-4 align-items-start">
+                    <div class="col-md-4 col-lg-3"><div class="ll-cab">
+                        <figcaption>Inside the signal cabinet</figcaption>
+                        <figure class="ll-pin">
+                            <img src="../assets/livinglab/cabinet.jpg" width="800" height="1062" alt="Inside the signal cabinet" loading="lazy">
+                            <span class="ll-box" style="left:16.8%; top:5.8%; width:19.9%; height:14.9%; border-color:var(--ll-green)"><span style="background:var(--ll-green)">Edge computer</span></span>
+                            <span class="ll-box" style="left:24%; top:33.6%; width:15.5%; height:8.4%; border-color:var(--ll-red)"><span style="background:var(--ll-red)">Network switch</span></span>
+                        </figure></div>
+                    </div>
+                    <div class="col-md-8 col-lg-9">
+                        <ol class="ll-flow">
+                            <li><span class="ll-num">1</span><b>Panoramic camera</b><span class="d">Video of the whole intersection from the signal pole</span></li>
+                            <li><span class="ll-num">2</span><b>Signal cabinet</b><span class="d">A switch links the camera, the roadside unit and the edge computer</span></li>
+                            <li><span class="ll-num">3</span><b>Lab server</b><span class="d">Finds and follows every road user</span></li>
+                            <li><span class="ll-num">4</span><b>Dashboard</b><span class="d">Live view, history and analytics</span></li>
+                        </ol>
+                        <div class="mt-4">
+                            <p><b>Every car, bus, bike and person</b> is picked out in the camera video, followed across the intersection, and placed on the campus map to about a meter.</p>
+                            <p><b>The traffic light is read from the video too,</b> since the signal controller is not connected yet.</p>
+                            <p class="mb-0"><b>It is stored as well,</b> so a past stretch can be played back, counted or exported. Video and tracks stay on the lab's secured systems.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="today">
+                <h2>Current capabilities</h2>
+
+                <div class="sub" id="live">
+                    <h3>Live view and replay</h3>
+                    <p>The video, every road user's track and the signal state are recorded as they happen. The same dashboard that shows the intersection live can switch to any stored stretch and play it back, with the map and the camera views in step.</p>
+                    <div class="row g-3">
+                        <div class="col-md-6"><figure><a class="zoom" href="../assets/livinglab/dash_live.jpg"><img src="../assets/livinglab/dash_live.jpg" width="1400" height="788" alt="Dashboard live view: camera views and the map of road users" loading="lazy"></a><figcaption><b>Live</b></figcaption></figure></div>
+                        <div class="col-md-6"><figure><a class="zoom" href="../assets/livinglab/dash_replay.jpg"><img src="../assets/livinglab/dash_replay.jpg" width="1400" height="788" alt="Dashboard replay of a stored morning" loading="lazy"></a><figcaption><b>Replay</b> of a morning class change</figcaption></figure></div>
+                    </div>
+                </div>
+
+                <div class="sub" id="safety">
+                    <h3>Automatically captured safety-critical events</h3>
+                    <p>Conflicts between vehicles, pedestrians and cyclists are detected from the live tracks. Each event is saved with its video clip and surrogate safety measures such as time to collision (TTC), post-encroachment time (PET) and closest distance, building a record of where and when conflicts recur. Three examples:</p>
+                    <div class="row g-4">
+                        <div class="col-md-4 d-flex flex-column">
+                            <div class="ll-metric">TTC 0.3 s<small class="muted">time to collision</small></div>
+                            <p class="muted mb-2">A turning SUV cuts in front of two people on the crosswalk.</p>
+                            <figure class="mt-auto"><img src="../assets/livinglab/event_ttc.jpg" width="960" height="540" alt="A turning SUV in front of two people on the crosswalk" loading="lazy"></figure>
+                        </div>
+                        <div class="col-md-4 d-flex flex-column">
+                            <div class="ll-metric">3.0 m<small class="muted">from a person in the crosswalk</small></div>
+                            <p class="muted mb-2">A truck towing an excavator turns past a person crossing.</p>
+                            <figure class="mt-auto"><img src="../assets/livinglab/event_truck.jpg" width="960" height="540" alt="A truck towing an excavator turns past a person crossing" loading="lazy"></figure>
+                        </div>
+                        <div class="col-md-4 d-flex flex-column">
+                            <div class="ll-metric">PET 0.1 s<small class="muted">post-encroachment time</small></div>
+                            <p class="muted mb-2">A cyclist crosses just ahead of a turning SUV, which reaches the same spot a tenth of a second later.</p>
+                            <figure class="mt-auto"><img src="../assets/livinglab/event_pet.jpg" width="960" height="540" alt="A cyclist crosses just ahead of a turning SUV" loading="lazy"></figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub" id="traffic">
+                    <h3>Turning movements and pedestrian volumes</h3>
+                    <p>Turning movement counts, turning ratios and pedestrian volumes are produced from the tracks for every approach and crosswalk and stored, so any period can be summarized at the time step a study needs. An example weekday from the dashboard:</p>
+                    <div class="row g-3 align-items-start ll-fig-wide">
+                        <div class="col-md-6"><figure><a class="zoom" href="../assets/livinglab/veh_map.jpg"><img src="../assets/livinglab/veh_map.jpg" width="1100" height="825" alt="Map of left, through and right turns from each approach" loading="lazy"></a><figcaption>Turning movement counts from each approach</figcaption></figure></div>
+                        <div class="col-md-6"><figure><a class="zoom" href="../assets/livinglab/veh_lines.jpg"><img src="../assets/livinglab/veh_lines.jpg" width="892" height="720" alt="Vehicles per 15 minutes from each approach" loading="lazy"></a><figcaption>Vehicles per 15 minutes; grey bands are class changes</figcaption></figure></div>
+                    </div>
+                    <div class="row g-3 align-items-start mt-2 ll-fig-wide">
+                        <div class="col-md-7"><figure><a class="zoom" href="../assets/livinglab/ped_map.jpg"><img src="../assets/livinglab/ped_map.jpg" width="1100" height="606" alt="Map of people crossing on each crosswalk" loading="lazy"></a><figcaption>Pedestrian crossings on each crosswalk</figcaption></figure></div>
+                        <div class="col-md-5"><figure><a class="zoom" href="../assets/livinglab/ped_lines.jpg"><img src="../assets/livinglab/ped_lines.jpg" width="892" height="660" alt="People crossing per 15 minutes by crosswalk" loading="lazy"></a><figcaption>Pedestrians per 15 minutes, by crosswalk</figcaption></figure></div>
+                    </div>
+                </div>
+
+                <div class="sub" id="signal">
+                    <h3>Signal performance analytics</h3>
+                    <p>The signal state read from the video is paired with every tracked vehicle, giving cycle-by-cycle performance measures for each approach: arrivals on green, platoon ratio, vehicles stopped, average delay and coordination diagrams. They show how well the current timing serves real demand, using only the camera, with no detectors or controller connection.</p>
+                    <figure class="mb-3 ll-fig-wide"><a class="zoom" href="../assets/livinglab/signal_perf.jpg"><img src="../assets/livinglab/signal_perf.jpg" width="1800" height="267" alt="Signal performance summary by approach" loading="lazy"></a>
+                        <figcaption>Summary by approach for one stored period, as the dashboard shows it</figcaption></figure>
+                    <figure class="ll-fig-wide"><a class="zoom" href="../assets/livinglab/signal_pcd.jpg"><img src="../assets/livinglab/signal_pcd.jpg" width="1800" height="659" alt="Arrivals on green and red, westbound, 8 to 9 am" loading="lazy"></a>
+                        <figcaption>Each column is one signal cycle and each dot one arriving vehicle</figcaption></figure>
+                </div>
+            </section>
+
+            <section id="next">
+                <h2>Ongoing research</h2>
+
+                <div class="sub" id="predict">
+                    <h3>Trajectory prediction</h3>
+                    <p>Building on the live tracks, a learned occupancy model forecasts where every car, bus, bike and person will be over the next one to three seconds, from what the cameras have seen up to that moment<span class="ll-ref">&nbsp;[<a href="#pub-1" title="Jia and Shao, MECC 2026">1</a>,&nbsp;<a href="#pub-2" title="Guo and Shao, MECC 2025">2</a>]</span>. Short-horizon forecasts like these are what proactive applications need: warning a driver before a conflict, and adjusting the signal in real time.</p>
+                    <div class="row g-3 ll-fig-wide">
+                        <div class="col-6"><figure><figcaption>The camera at that moment</figcaption><img src="../assets/livinglab/pred_cam1.jpg" width="900" height="506" alt="Camera view at that moment" loading="lazy"></figure></div>
+                        <div class="col-6 d-flex flex-column"><figure class="mt-auto"><img src="../assets/livinglab/pred_cam4.jpg" width="900" height="506" alt="Second camera view at that moment" loading="lazy"></figure></div>
+                    </div>
+                    <p class="small-note mt-3 mb-2">How to read it: red is where the model expects road users to be. Each white box is where it expects a vehicle to be, each white circle a person.</p>
+                    <div class="row g-3">
+                        <div class="col-6 col-md-3"><figure><figcaption>Now</figcaption><a class="zoom" href="../assets/livinglab/pred_now.jpg"><img src="../assets/livinglab/pred_now.jpg" width="700" height="700" alt="Map of where everyone is now" loading="lazy"></a></figure></div>
+                        <div class="col-6 col-md-3"><figure><figcaption>Predicted 1 s ahead</figcaption><a class="zoom" href="../assets/livinglab/pred_1s.jpg"><img src="../assets/livinglab/pred_1s.jpg" width="700" height="700" alt="Prediction 1 second ahead" loading="lazy"></a></figure></div>
+                        <div class="col-6 col-md-3"><figure><figcaption>Predicted 2 s ahead</figcaption><a class="zoom" href="../assets/livinglab/pred_2s.jpg"><img src="../assets/livinglab/pred_2s.jpg" width="700" height="700" alt="Prediction 2 seconds ahead" loading="lazy"></a></figure></div>
+                        <div class="col-6 col-md-3"><figure><figcaption>Predicted 3 s ahead</figcaption><a class="zoom" href="../assets/livinglab/pred_3s.jpg"><img src="../assets/livinglab/pred_3s.jpg" width="700" height="700" alt="Prediction 3 seconds ahead" loading="lazy"></a></figure></div>
+                    </div>
+                </div>
+
+                <div class="sub" id="warning">
+                    <h3>From prediction to driver warnings</h3>
+                    <p>The first application of the forecasts: when a vehicle's predicted path meets a pedestrian's, the driver is alerted. Detection and prediction will run on the edge computer in the signal cabinet, keeping the delay short enough for the driver to react, first through a phone app and then over V2X through the roadside unit.</p>
+                    <p class="small-note mb-2">Top: what the driver would see. Bottom: the same kind of moment at this intersection.</p>
+                    <div class="row g-4 ll-app">
+                        <div class="col-md-4">
+                            <figure class="mb-2"><figcaption>Turning left from the west, someone crossing the north crosswalk</figcaption><img src="../assets/livinglab/app_left.jpg" width="900" height="336" alt="App mock-up: pedestrian heading for your left turn" loading="lazy"></figure>
+                            <figure><img src="../assets/livinglab/warn_left.jpg" width="900" height="506" alt="A car turning left while a person crosses" loading="lazy"></figure>
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="mb-2"><figcaption>Turning right from the south, someone on the east crosswalk</figcaption><img src="../assets/livinglab/app_right.jpg" width="900" height="336" alt="App mock-up: pedestrian on your right turn" loading="lazy"></figure>
+                            <figure><img src="../assets/livinglab/warn_right.jpg" width="900" height="506" alt="An SUV turning right while a person crosses" loading="lazy"></figure>
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="mb-2"><figcaption>Someone crossing mid-block into the lane of an oncoming car</figcaption><img src="../assets/livinglab/app_midblock.jpg" width="900" height="336" alt="App mock-up: pedestrian in your lane" loading="lazy"></figure>
+                            <figure><img src="../assets/livinglab/warn_midblock.jpg" width="560" height="315" alt="A person crossing mid-block in front of an oncoming car" loading="lazy"></figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub" id="timing">
+                    <h3>Testing signal timing plans on real traffic</h3>
+                    <p>Real traffic from just after a class change is copied into a simulator and run five minutes ahead under four timing plans: the same vehicles and people, only the signal differs. A timing change can be judged on real demand before it reaches the field, a step toward real-time signal control.</p>
+                    <div class="ll-legend">
+                        <span><i class="g"></i>green</span><span><i class="y"></i>yellow</span><span><i class="rd"></i>red</span>
+                        <span><i class="w"></i>pedestrian only: both phases on red, people cross the east and west crosswalks</span>
+                    </div>
+                    <p class="small-note">Each bar is one signal cycle, all drawn to the same 100 s scale; the number below it is the cycle length. Ph2 serves east-west traffic, Ph8 north-south. Yellow is 4 s and the final red before Ph2 is 2 s.</p>
+                    <div class="row g-4">
+                        <div class="col-6 col-lg-3 ll-plan base">
+                            <h3>As the signal ran</h3>
+                            <div class="ll-rb"><div class="ll-rb-row"><span>Ph2</span><div class="ll-bar"><i class="g" style="width:30.2%" title="30.2 s">30</i><i class="y" style="width:4.1%" title="4.1 s"></i><i class="rd" style="width:44.5%" title="44.5 s">44</i></div></div><div class="ll-rb-row"><span>Ph8</span><div class="ll-bar"><i class="rd" style="width:34.3%" title="34.3 s">34</i><i class="w" style="width:8.5%" title="8.5 s">8</i><i class="g" style="width:30.0%" title="30.0 s">30</i><i class="y" style="width:4.0%" title="4.0 s"></i><i class="rd" style="width:2.0%" title="2.0 s"></i></div></div><div class="ll-rb-row"><span></span><div class="ll-axis" style="--c:78.8%"><b style="left:0%">0</b><b style="left:78.8%" title="cycle length">79 s</b></div></div></div>
+                            <figure class="ll-pin ll-bev"><img src="../assets/livinglab/timing_recorded.jpg" width="600" height="600" alt="Simulated intersection under the recorded timing" loading="lazy"><span class="ll-tag" style="left:27%; top:63%">Ph2</span><span class="ll-tag" style="left:80%; top:40.5%">Ph2</span><span class="ll-tag" style="left:27%; top:37%">Ph8</span><span class="ll-tag" style="left:87%; top:72%">Ph8</span></figure>
+                            <ul><li><b>10 s</b>average vehicle delay</li><li><b>8 s</b>people wait to cross</li><li><b>29 s</b>bus delay</li></ul>
+                        </div>
+                        <div class="col-6 col-lg-3 ll-plan">
+                            <h3>10 s more for east-west</h3>
+                            <div class="ll-rb"><div class="ll-rb-row"><span>Ph2</span><div class="ll-bar"><i class="g" style="width:40.1%" title="40.1 s">40</i><i class="y" style="width:4.0%" title="4.0 s"></i><i class="rd" style="width:34.7%" title="34.7 s">35</i></div></div><div class="ll-rb-row"><span>Ph8</span><div class="ll-bar"><i class="rd" style="width:44.1%" title="44.1 s">44</i><i class="w" style="width:8.6%" title="8.6 s">9</i><i class="g" style="width:20.1%" title="20.1 s">20</i><i class="y" style="width:4.0%" title="4.0 s"></i><i class="rd" style="width:2.0%" title="2.0 s"></i></div></div><div class="ll-rb-row"><span></span><div class="ll-axis" style="--c:78.8%"><b style="left:0%">0</b><b style="left:78.8%" title="cycle length">79 s</b></div></div></div>
+                            <figure class="ll-pin ll-bev"><img src="../assets/livinglab/timing_ew.jpg" width="600" height="600" alt="Simulated intersection with more green for east-west" loading="lazy"><span class="ll-tag" style="left:27%; top:63%">Ph2</span><span class="ll-tag" style="left:80%; top:40.5%">Ph2</span><span class="ll-tag" style="left:27%; top:37%">Ph8</span><span class="ll-tag" style="left:87%; top:72%">Ph8</span></figure>
+                            <ul><li><b>7 s</b>average vehicle delay</li><li><b>16 s</b>people wait to cross</li><li><b>10 s</b>bus delay</li></ul>
+                        </div>
+                        <div class="col-6 col-lg-3 ll-plan">
+                            <h3>Shorter cycle</h3>
+                            <div class="ll-rb"><div class="ll-rb-row"><span>Ph2</span><div class="ll-bar"><i class="g" style="width:13.2%" title="13.2 s">13</i><i class="y" style="width:4.0%" title="4.0 s"></i><i class="rd" style="width:27.8%" title="27.8 s">28</i></div></div><div class="ll-rb-row"><span>Ph8</span><div class="ll-bar"><i class="rd" style="width:17.2%" title="17.2 s">17</i><i class="w" style="width:8.6%" title="8.6 s">9</i><i class="g" style="width:13.2%" title="13.2 s">13</i><i class="y" style="width:4.0%" title="4.0 s"></i><i class="rd" style="width:2.0%" title="2.0 s"></i></div></div><div class="ll-rb-row"><span></span><div class="ll-axis" style="--c:45.0%"><b style="left:0%">0</b><b style="left:45.0%" title="cycle length">45 s</b></div></div></div>
+                            <figure class="ll-pin ll-bev"><img src="../assets/livinglab/timing_short.jpg" width="600" height="600" alt="Simulated intersection with a shorter cycle" loading="lazy"><span class="ll-tag" style="left:27%; top:63%">Ph2</span><span class="ll-tag" style="left:80%; top:40.5%">Ph2</span><span class="ll-tag" style="left:27%; top:37%">Ph8</span><span class="ll-tag" style="left:87%; top:72%">Ph8</span></figure>
+                            <ul><li><b>7 s</b>average vehicle delay</li><li><b>11 s</b>people wait to cross</li><li><b>17 s</b>bus delay</li></ul>
+                        </div>
+                        <div class="col-6 col-lg-3 ll-plan">
+                            <h3>Longer cycle</h3>
+                            <div class="ll-rb"><div class="ll-rb-row"><span>Ph2</span><div class="ll-bar"><i class="g" style="width:40.7%" title="40.7 s">41</i><i class="y" style="width:4.0%" title="4.0 s"></i><i class="rd" style="width:55.3%" title="55.3 s">55</i></div></div><div class="ll-rb-row"><span>Ph8</span><div class="ll-bar"><i class="rd" style="width:44.7%" title="44.7 s">45</i><i class="w" style="width:8.6%" title="8.6 s">9</i><i class="g" style="width:40.7%" title="40.7 s">41</i><i class="y" style="width:4.0%" title="4.0 s"></i><i class="rd" style="width:2.0%" title="2.0 s"></i></div></div><div class="ll-rb-row"><span></span><div class="ll-axis" style="--c:100.0%"><b style="left:0%">0</b><b class="end" style="left:100.0%" title="cycle length">100 s</b></div></div></div>
+                            <figure class="ll-pin ll-bev"><img src="../assets/livinglab/timing_long.jpg" width="600" height="600" alt="Simulated intersection with a longer cycle" loading="lazy"><span class="ll-tag" style="left:27%; top:63%">Ph2</span><span class="ll-tag" style="left:80%; top:40.5%">Ph2</span><span class="ll-tag" style="left:27%; top:37%">Ph8</span><span class="ll-tag" style="left:87%; top:72%">Ph8</span></figure>
+                            <ul><li><b>12 s</b>average vehicle delay</li><li><b>21 s</b>people wait to cross</li><li><b>12 s</b>bus delay</li></ul>
+                        </div>
+                    </div>
+                    <p class="small-note mt-3">Maps show the same moment, 1.5 minutes in: red a vehicle waiting at the light, white moving, yellow a person. Numbers are averages over the five minutes, for 32 vehicles, 4 buses and 42 people.</p>
+                </div>
+
+                <div class="sub" id="bus">
+                    <h3>Transit signal priority</h3>
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6">
+                            <figure><img src="../assets/livinglab/bus_wait.jpg" width="1060" height="596" alt="A campus bus waiting at the red light" loading="lazy"><figcaption>A bus from the west at the stop just before the light</figcaption></figure>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Campus buses are picked out from the tracks, along with how often and how long the red light holds them. The V2X roadside unit on the pole and the signal controller in the cabinet are a few meters apart. With a link between them, an approaching bus could ask for a few more seconds of green.</p>
+                            <p class="small-note mb-1">Share of buses held at the red, and for how long</p>
+                            <div class="ll-hbars">
+                                <div class="ll-hbar"><span>From the south</span><span class="track"><span class="fill" style="width:44%"></span><span class="val">44%, typically 26 s</span></span></div>
+                                <div class="ll-hbar"><span>From the west</span><span class="track"><span class="fill" style="width:36%"></span><span class="val">36%, typically 38 s</span></span></div>
+                                <div class="ll-hbar"><span>From the north</span><span class="track"><span class="fill" style="width:31%"></span><span class="val">31%, typically 29 s</span></span></div>
+                                <div class="ll-hbar"><span>From the east</span><span class="track"><span class="fill" style="width:7%"></span><span class="val">7%, typically 12 s</span></span></div>
+                            </div>
+                            <p class="small-note mt-2 mb-0">Counted only when a bus was still waiting as the light turned green, so stops to pick up riders are left out.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="publications">
+                <h2>Publications</h2>
+                <ol class="ll-pubs">
+                    <li id="pub-1">Z. Jia and Y. Shao, "Joint prediction of virtual leader from future occupancy and queueing theory in automated vehicles," <i>Modeling, Estimation and Control Conference (MECC)</i>, 2026. <span class="muted">Presented October 2026; the paper will be linked here once the proceedings are online.</span></li>
+                    <li id="pub-2">H. Guo and Y. Shao, "Traffic flow aware occupancy prediction for energy and mobility centric connected and automated vehicles," <i>Modeling, Estimation and Control Conference (MECC)</i>, IFAC-PapersOnLine, vol. 59, no. 30, pp. 281&ndash;286, 2025. <a href="https://www.sciencedirect.com/science/article/pii/S240589632502960X" target="_blank" rel="noopener noreferrer">Paper<i class="fa fa-external-link-alt ms-1"></i></a></li>
+                </ol>
+            </section>
+
+            <section id="contact">
+                <div class="ll-cta">
+                    <h2>Work with us</h2>
+                    <p>We are open to working with partners anywhere, and especially with UGA faculty, students and campus units, since the living lab is on campus. If your work involves traffic, safety, transit, connected and automated vehicles, real-time control or campus planning, we would be glad to talk.</p>
+                    <p>The live system runs on a secured network to protect privacy and data, and we are happy to show it in person on campus or over a call.</p>
+                    <div class="ll-ways">
+                        <div><i class="fa fa-users"></i><b>Research collaboration</b><span>Joint projects and proposals on traffic safety, real-time signal and vehicle control, transit, pedestrians, and connected and automated vehicles.</span></div>
+                        <div><i class="fa fa-traffic-light"></i><b>New ideas for the site</b><span>Have an algorithm, sensor or V2X application in mind for a real intersection? Let's discuss what could fit.</span></div>
+                        <div><i class="fa fa-lightbulb"></i><b>Your research question</b><span>If a working intersection could help answer it, tell us about it and we can explore it together.</span></div>
+                        <div><i class="fa fa-user-graduate"></i><b>Students</b><span>Interested in this kind of work? See <a href="../positions.html">Join Us</a>.</span></div>
+                    </div>
+                    <p class="mb-0"><i class="far fa-envelope text-primary me-2"></i><a href="mailto:yunli.shao@uga.edu">yunli.shao@uga.edu</a></p>
+                </div>
+                <p class="ll-ack mt-3 mb-0">Supported by a <a href="https://emobility.uga.edu/" target="_blank" rel="noopener noreferrer">Georgia Network for Electric Mobility (GNEM)</a> seed project. Thanks to Dr. Dan Silk and <a href="https://staysafe.uga.edu/" target="_blank" rel="noopener noreferrer">UGA Public Safety</a> for making the installation possible.</p>
+            </section>
+
+            <a href="../research.html" class="btn btn-primary btn-sm py-2 px-3 mt-4 research-item-btn">Go back<i class="fa fa-arrow-left ms-3"></i></a>
         </div>
     </div>
-
     <!-- Research End -->
 
     <!-- Footer Start -->
