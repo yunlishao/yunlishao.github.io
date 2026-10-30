@@ -123,7 +123,7 @@
     <div class="container-fluid page-header mb-5 p-0" style="background-image: url(../img/header-img-1.jpeg);">
         <div class="container-fluid page-header-inner py-5">
             <div class="container text-center">
-                <h1 class="display-4 text-white mb-3 animated slideInDown">Research Areas</h1>
+                <h1 class="display-4 text-white mb-3 animated slideInDown">Research</h1>
                 <!-- <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center text-uppercase">
                         <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
@@ -191,7 +191,7 @@
                                         <li><span class="ll-num">2</span><b>V2X roadside unit.</b> Standards-compatible (C-V2X or DSRC), for messages between the intersection and connected vehicles.</li>
                                     </ul>
                                 </div>
-                                <div class="col-sm-5 col-md-3">
+                                <div class="col-sm-5 col-md-3 ll-install">
                                     <figure>
                                         <img src="../assets/livinglab/pole_install.jpg" width="700" height="929" alt="Installing the camera from a bucket truck" loading="lazy">
                                         <figcaption>Installation, April 2026</figcaption>
@@ -295,10 +295,8 @@
                 <div class="sub" id="signal">
                     <h3>Signal performance analytics</h3>
                     <p>The signal state read from the video is paired with every tracked vehicle, giving cycle-by-cycle performance measures for each approach: arrivals on green, platoon ratio, vehicles stopped, average delay and coordination diagrams. They show how well the current timing serves real demand, using only the camera, with no detectors or controller connection.</p>
-                    <figure class="mb-3 ll-fig-wide"><a class="zoom" href="../assets/livinglab/signal_perf.jpg"><img src="../assets/livinglab/signal_perf.jpg" width="1800" height="267" alt="Signal performance summary by approach" loading="lazy"></a>
-                        <figcaption>Summary by approach for one stored period, as the dashboard shows it</figcaption></figure>
-                    <figure class="ll-fig-wide"><a class="zoom" href="../assets/livinglab/signal_pcd.jpg"><img src="../assets/livinglab/signal_pcd.jpg" width="1800" height="659" alt="Arrivals on green and red, westbound, 8 to 9 am" loading="lazy"></a>
-                        <figcaption>Each column is one signal cycle and each dot one arriving vehicle</figcaption></figure>
+                    <figure class="mb-3 ll-fig-wide"><figcaption>Summary by approach for one stored period, as the dashboard shows it</figcaption><a class="zoom d-none d-sm-block" href="../assets/livinglab/signal_perf.jpg"><img src="../assets/livinglab/signal_perf.jpg" width="1800" height="267" alt="Signal performance summary by approach" loading="lazy"></a><div class="ll-panels d-sm-none"><img src="../assets/livinglab/signal_perf_1.jpg" width="715" height="267" style="width:100%" alt="Arrivals on green by approach" loading="lazy"><img src="../assets/livinglab/signal_perf_2.jpg" width="515" height="267" style="width:72%" alt="Vehicles that stopped by approach" loading="lazy"><img src="../assets/livinglab/signal_perf_3.jpg" width="635" height="267" style="width:89%" alt="Average delay per vehicle by approach" loading="lazy"></div></figure>
+                    <figure class="ll-fig-wide"><figcaption>Each column is one signal cycle and each dot one arriving vehicle<span class="d-sm-none">; swipe sideways to see the whole hour</span></figcaption><div class="ll-swipe"><a class="zoom" href="../assets/livinglab/signal_pcd.jpg"><img src="../assets/livinglab/signal_pcd.jpg" width="1800" height="659" alt="Arrivals on green and red, westbound, 8 to 9 am" loading="lazy"></a></div></figure>
                 </div>
             </section>
 
@@ -308,9 +306,10 @@
                 <div class="sub" id="predict">
                     <h3>Trajectory prediction</h3>
                     <p>Building on the live tracks, a learned occupancy model forecasts where every car, bus, bike and person will be over the next one to three seconds, from what the cameras have seen up to that moment<span class="ll-ref">&nbsp;[<a href="#pub-1" title="Jia and Shao, MECC 2026">1</a>,&nbsp;<a href="#pub-2" title="Guo and Shao, MECC 2025">2</a>]</span>. Short-horizon forecasts like these are what proactive applications need: warning a driver before a conflict, and adjusting the signal in real time.</p>
+                    <p class="ll-cap-out ll-fig-wide">The camera at that moment</p>
                     <div class="row g-3 ll-fig-wide">
-                        <div class="col-6"><figure><figcaption>The camera at that moment</figcaption><img src="../assets/livinglab/pred_cam1.jpg" width="900" height="506" alt="Camera view at that moment" loading="lazy"></figure></div>
-                        <div class="col-6 d-flex flex-column"><figure class="mt-auto"><img src="../assets/livinglab/pred_cam4.jpg" width="900" height="506" alt="Second camera view at that moment" loading="lazy"></figure></div>
+                        <div class="col-6"><figure><img src="../assets/livinglab/pred_cam1.jpg" width="900" height="506" alt="Camera view at that moment" loading="lazy"></figure></div>
+                        <div class="col-6"><figure><img src="../assets/livinglab/pred_cam4.jpg" width="900" height="506" alt="Second camera view at that moment" loading="lazy"></figure></div>
                     </div>
                     <p class="small-note mt-3 mb-2">How to read it: red is where the model expects road users to be. Each white box is where it expects a vehicle to be, each white circle a person.</p>
                     <div class="row g-3">
@@ -350,25 +349,25 @@
                     </div>
                     <p class="small-note">Each bar is one signal cycle, all drawn to the same 100 s scale; the number below it is the cycle length. Ph2 serves east-west traffic, Ph8 north-south. Yellow is 4 s and the final red before Ph2 is 2 s.</p>
                     <div class="row g-4">
-                        <div class="col-6 col-lg-3 ll-plan base">
+                        <div class="col-12 col-sm-6 col-lg-3 ll-plan base">
                             <h3>As the signal ran</h3>
                             <div class="ll-rb"><div class="ll-rb-row"><span>Ph2</span><div class="ll-bar"><i class="g" style="width:30.2%" title="30.2 s">30</i><i class="y" style="width:4.1%" title="4.1 s"></i><i class="rd" style="width:44.5%" title="44.5 s">44</i></div></div><div class="ll-rb-row"><span>Ph8</span><div class="ll-bar"><i class="rd" style="width:34.3%" title="34.3 s">34</i><i class="w" style="width:8.5%" title="8.5 s">8</i><i class="g" style="width:30.0%" title="30.0 s">30</i><i class="y" style="width:4.0%" title="4.0 s"></i><i class="rd" style="width:2.0%" title="2.0 s"></i></div></div><div class="ll-rb-row"><span></span><div class="ll-axis" style="--c:78.8%"><b style="left:0%">0</b><b style="left:78.8%" title="cycle length">79 s</b></div></div></div>
                             <figure class="ll-pin ll-bev"><img src="../assets/livinglab/timing_recorded.jpg" width="600" height="600" alt="Simulated intersection under the recorded timing" loading="lazy"><span class="ll-tag" style="left:27%; top:63%">Ph2</span><span class="ll-tag" style="left:80%; top:40.5%">Ph2</span><span class="ll-tag" style="left:27%; top:37%">Ph8</span><span class="ll-tag" style="left:87%; top:72%">Ph8</span></figure>
                             <ul><li><b>10 s</b>average vehicle delay</li><li><b>8 s</b>people wait to cross</li><li><b>29 s</b>bus delay</li></ul>
                         </div>
-                        <div class="col-6 col-lg-3 ll-plan">
+                        <div class="col-12 col-sm-6 col-lg-3 ll-plan">
                             <h3>10 s more for east-west</h3>
                             <div class="ll-rb"><div class="ll-rb-row"><span>Ph2</span><div class="ll-bar"><i class="g" style="width:40.1%" title="40.1 s">40</i><i class="y" style="width:4.0%" title="4.0 s"></i><i class="rd" style="width:34.7%" title="34.7 s">35</i></div></div><div class="ll-rb-row"><span>Ph8</span><div class="ll-bar"><i class="rd" style="width:44.1%" title="44.1 s">44</i><i class="w" style="width:8.6%" title="8.6 s">9</i><i class="g" style="width:20.1%" title="20.1 s">20</i><i class="y" style="width:4.0%" title="4.0 s"></i><i class="rd" style="width:2.0%" title="2.0 s"></i></div></div><div class="ll-rb-row"><span></span><div class="ll-axis" style="--c:78.8%"><b style="left:0%">0</b><b style="left:78.8%" title="cycle length">79 s</b></div></div></div>
                             <figure class="ll-pin ll-bev"><img src="../assets/livinglab/timing_ew.jpg" width="600" height="600" alt="Simulated intersection with more green for east-west" loading="lazy"><span class="ll-tag" style="left:27%; top:63%">Ph2</span><span class="ll-tag" style="left:80%; top:40.5%">Ph2</span><span class="ll-tag" style="left:27%; top:37%">Ph8</span><span class="ll-tag" style="left:87%; top:72%">Ph8</span></figure>
                             <ul><li><b>7 s</b>average vehicle delay</li><li><b>16 s</b>people wait to cross</li><li><b>10 s</b>bus delay</li></ul>
                         </div>
-                        <div class="col-6 col-lg-3 ll-plan">
+                        <div class="col-12 col-sm-6 col-lg-3 ll-plan">
                             <h3>Shorter cycle</h3>
                             <div class="ll-rb"><div class="ll-rb-row"><span>Ph2</span><div class="ll-bar"><i class="g" style="width:13.2%" title="13.2 s">13</i><i class="y" style="width:4.0%" title="4.0 s"></i><i class="rd" style="width:27.8%" title="27.8 s">28</i></div></div><div class="ll-rb-row"><span>Ph8</span><div class="ll-bar"><i class="rd" style="width:17.2%" title="17.2 s">17</i><i class="w" style="width:8.6%" title="8.6 s">9</i><i class="g" style="width:13.2%" title="13.2 s">13</i><i class="y" style="width:4.0%" title="4.0 s"></i><i class="rd" style="width:2.0%" title="2.0 s"></i></div></div><div class="ll-rb-row"><span></span><div class="ll-axis" style="--c:45.0%"><b style="left:0%">0</b><b style="left:45.0%" title="cycle length">45 s</b></div></div></div>
                             <figure class="ll-pin ll-bev"><img src="../assets/livinglab/timing_short.jpg" width="600" height="600" alt="Simulated intersection with a shorter cycle" loading="lazy"><span class="ll-tag" style="left:27%; top:63%">Ph2</span><span class="ll-tag" style="left:80%; top:40.5%">Ph2</span><span class="ll-tag" style="left:27%; top:37%">Ph8</span><span class="ll-tag" style="left:87%; top:72%">Ph8</span></figure>
                             <ul><li><b>7 s</b>average vehicle delay</li><li><b>11 s</b>people wait to cross</li><li><b>17 s</b>bus delay</li></ul>
                         </div>
-                        <div class="col-6 col-lg-3 ll-plan">
+                        <div class="col-12 col-sm-6 col-lg-3 ll-plan">
                             <h3>Longer cycle</h3>
                             <div class="ll-rb"><div class="ll-rb-row"><span>Ph2</span><div class="ll-bar"><i class="g" style="width:40.7%" title="40.7 s">41</i><i class="y" style="width:4.0%" title="4.0 s"></i><i class="rd" style="width:55.3%" title="55.3 s">55</i></div></div><div class="ll-rb-row"><span>Ph8</span><div class="ll-bar"><i class="rd" style="width:44.7%" title="44.7 s">45</i><i class="w" style="width:8.6%" title="8.6 s">9</i><i class="g" style="width:40.7%" title="40.7 s">41</i><i class="y" style="width:4.0%" title="4.0 s"></i><i class="rd" style="width:2.0%" title="2.0 s"></i></div></div><div class="ll-rb-row"><span></span><div class="ll-axis" style="--c:100.0%"><b style="left:0%">0</b><b class="end" style="left:100.0%" title="cycle length">100 s</b></div></div></div>
                             <figure class="ll-pin ll-bev"><img src="../assets/livinglab/timing_long.jpg" width="600" height="600" alt="Simulated intersection with a longer cycle" loading="lazy"><span class="ll-tag" style="left:27%; top:63%">Ph2</span><span class="ll-tag" style="left:80%; top:40.5%">Ph2</span><span class="ll-tag" style="left:27%; top:37%">Ph8</span><span class="ll-tag" style="left:87%; top:72%">Ph8</span></figure>
@@ -403,7 +402,7 @@
                 <h2>Publications</h2>
                 <ol class="ll-pubs">
                     <li id="pub-1">Z. Jia and Y. Shao, "Joint prediction of virtual leader from future occupancy and queueing theory in automated vehicles," <i>Modeling, Estimation and Control Conference (MECC)</i>, 2026. <span class="muted">Presented October 2026; the paper will be linked here once the proceedings are online.</span></li>
-                    <li id="pub-2">H. Guo and Y. Shao, "Traffic flow aware occupancy prediction for energy and mobility centric connected and automated vehicles," <i>Modeling, Estimation and Control Conference (MECC)</i>, IFAC-PapersOnLine, vol. 59, no. 30, pp. 281&ndash;286, 2025. <a href="https://www.sciencedirect.com/science/article/pii/S240589632502960X" target="_blank" rel="noopener noreferrer">Paper<i class="fa fa-external-link-alt ms-1"></i></a></li>
+                    <li id="pub-2">H. Guo and Y. Shao, "Traffic flow aware occupancy prediction for energy and mobility centric connected and automated vehicles," <i>Modeling, Estimation and Control Conference (MECC)</i>, 2025.</li>
                 </ol>
             </section>
 
