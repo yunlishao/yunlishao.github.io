@@ -295,9 +295,45 @@ h5.header-project-intro {
     object-fit: cover;
 }
 
-.people-img-width {
-    width: 20% !important;
+.people-team {
+    --people-photo-width: 200px;
+}
+
+.people-team .card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
     object-fit: cover;
+    object-position: center;
+}
+
+.people-portrait .card-img-top {
+    background-color: #f0f0f0;
+    border-radius: 0.375rem 0.375rem 0 0;
+}
+
+.people-team .people-placeholder {
+    object-fit: contain;
+    background-color: #f0f0f0;
+}
+
+@media (min-width: 768px) {
+    .people-team .card-img-top {
+        height: 240px;
+    }
+
+    .people-team .people-grid-portrait {
+        height: 200px;
+    }
+
+    .people-portrait,
+    .people-grid-column .card {
+        width: var(--people-photo-width);
+    }
+
+    .people-portrait .card-img-top {
+        border-radius: 0.375rem 0 0 0.375rem;
+    }
 }
 
 h5.people-name {
